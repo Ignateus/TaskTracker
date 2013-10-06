@@ -24,8 +24,8 @@
             <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
         </p>
         <div style="margin-left: 240px">
-            <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
-            <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" />
+            <asp:Button ID="btnLogin" runat="server" OnClick="BtnLogin_Click" Text="Login" />
+            <asp:Button ID="btnCancel" runat="server" OnClick="BtnCancel_Click" Text="Cancel" />
         </div>
         <div style="margin-left: 400px">
         </div>

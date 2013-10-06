@@ -1,0 +1,1109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="67de25b2-1c1e-4d8d-9f1d-479e22374911"
+  name="PTT Login" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="3161924e-2a63-49e3-a59e-d186d5952419"
+        name="PTT Application"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="6d69e108-6f07-4073-81e9-99760f9eaa60"
+            isDerived="false"
+            sourceEndRoleName="PTT Application"
+            targetEndRoleName="Database"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="112cf9b7-45c8-497b-9ac7-759d0a4b3f6a"
+              LastKnownName="Database"
+              LastKnownLocation="PTT Login.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fc393e19-ef8b-4f78-995f-454a2d3de00d"
+                  name="PTT Application"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8938e7f9-7e7e-4003-92ac-4539895bf671"
+                  name="Database"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="7d581b4c-2340-454e-83c5-1aed9b07f8b5"
+            name="ConnectToDatabase"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="10eaf28e-35b8-4b67-a9e8-28bbd8b7f0ef"
+        name="User"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="9cb40ff2-bed0-4c92-8d95-6dcaf3691708"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="PTT Application"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3161924e-2a63-49e3-a59e-d186d5952419"
+              LastKnownName="PTT Application"
+              LastKnownLocation="PTT Login.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d4d8e9ee-1389-4d05-99a2-c99be39c6f18"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="34d258cb-a8b2-42de-a7f5-6447c1dc6905"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4f78a775-8809-46f8-bf47-8555cee0ead0"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d486262-fa3d-463d-b841-664c4a26a858"
+                  name="PTT Application"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="97779ee6-5052-44b6-98bf-b41f0bb30425"
+            name="UserName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="625b313f-f033-4405-abae-b8fc3b92e4b3"
+            name="Password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="db6bba34-756c-4505-a5ce-8ae7e3e5a555"
+            name="Email"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a0c57f7b-43a3-4a24-b8f6-b6254a544985"
+            name="Phone"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="84e3ed47-848f-48a9-b633-2398483aae27"
+            name="Role"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2ef312c6-1078-48e0-916b-845da164d6de"
+            name="AdminLevel"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="36e13e1e-c2df-4fee-8b37-3fae2a818a8a"
+            name="FirstName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b22dbc2c-144a-4091-9b04-57d1844bb932"
+            name="LastName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="414fdd92-34cf-4ef6-b1f1-49e70908d2dd"
+            name="Logout"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="08230647-8184-4268-8949-2ea572f29a0c"
+            name="Login"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="112cf9b7-45c8-497b-9ac7-759d0a4b3f6a"
+        name="Database"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="02395bc4-ed13-4464-aa86-adb180c1be1a"
+            name="tblUser"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d0ba1ed1-42a6-49ab-b961-310de1dc8de7"
+            name="EnforceConstraints"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="40a46c89-52aa-4e68-9ff4-c0b529d9ad6c"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="e3630470-bdde-4ad1-9a2b-1de69564ca3d">
+            <body>Validation</body>
+          </comment>
+          <comment
+            Id="413cc148-458d-4fc7-bc69-1ee6a2a9414c">
+            <body>If login credentials match user will be directed to Menu Page.</body>
+          </comment>
+        </ownedCommentsInternal>
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="867036c3-59e7-4bd8-9f47-03dade0686f0"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="b1599098-31b4-41e6-81e9-66cb865fd674"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="PTT Login.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="62a0f1e8-d084-400c-8e37-55343ea299c7"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="PTT Login.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="91f3e230-ffcd-48aa-a35f-899928b8f998"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c70cfa5b-5364-4cd7-85b8-ef387e722647"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="PTT Login.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="62a0f1e8-d084-400c-8e37-55343ea299c7"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="80ea9218-e1ec-4be3-a77d-527d1743f6f1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PTT Login.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1ac62a0b-ced8-4db2-b53e-1c7034e2c8d8"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="531a4833-8fdc-4947-8332-a2236dac1570"
+                LastKnownName="User"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="91f3e230-ffcd-48aa-a35f-899928b8f998"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c70cfa5b-5364-4cd7-85b8-ef387e722647"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5ee84c81-c38e-424b-9ac9-3b698fdc09fb"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="531a4833-8fdc-4947-8332-a2236dac1570"
+                LastKnownName="User"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="b1599098-31b4-41e6-81e9-66cb865fd674"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f2247f00-782b-48c1-aadf-8dddc3f5bbb2"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PTT Login.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="2f890989-a4ef-4789-bd56-d811f2788862"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="465f8349-1083-46e7-aec6-62fc8f8d14b3"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="PTT Login.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="a312172c-2e15-4312-b589-f5687de66b4e"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="PTT Login.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="da62c05f-98bf-444e-b9cb-a078bd03e3c6"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0d17e647-5601-461d-8467-b85db536647f"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ecc40d9e-86c5-4185-b9d6-0678367bd051"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d9377379-f67f-4fa6-8486-64ea4a6b1570"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="394ed072-ee0c-412e-8ff4-fc83a6f3597a"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4e4f4aaf-f9d3-41bf-b760-e879a9ecc48f"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="PTT Login.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="a312172c-2e15-4312-b589-f5687de66b4e"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a5d8dbbd-7c10-4de9-b809-01126d511b5b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PTT Login.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c1ddeb9b-270a-4dcc-b6fd-879e92f2e6d3"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="531a4833-8fdc-4947-8332-a2236dac1570"
+                LastKnownName="User"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="da62c05f-98bf-444e-b9cb-a078bd03e3c6"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0944a3b1-35dd-4895-9424-0bcda25df884"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="6661a5c3-8b0c-40e6-9618-774f3dfaa065"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="PTT Login.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="0a0ed1c8-346a-47ba-84c6-2b5798489509"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="PTT Login.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="6a6fb967-d000-4319-bf7f-9bd6863c6e3f"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="51b467d3-539c-422f-9de2-eee8a36c54f3"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="PTT Login.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="0a0ed1c8-346a-47ba-84c6-2b5798489509"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3b79b616-0b16-42ba-a303-75c49ff44754"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PTT Login.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0d17e647-5601-461d-8467-b85db536647f"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6a6fb967-d000-4319-bf7f-9bd6863c6e3f"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="51b467d3-539c-422f-9de2-eee8a36c54f3"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ecc40d9e-86c5-4185-b9d6-0678367bd051"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="6661a5c3-8b0c-40e6-9618-774f3dfaa065"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ad2dc5b1-2d75-4f71-952e-9a529215e65f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PTT Login.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="53ef3314-183d-4eae-a8e1-4b032a31f089"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="b4d4a6c4-d621-4a80-80aa-ab2d8ea58c00"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="PTT Login.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="76453b3a-f37b-4659-9400-7985382d7c63"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="PTT Login.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="c6d7e67e-a484-4946-8da5-735715b8fdac"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6fe00089-e120-4f86-b29f-dae1170d97b4"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="PTT Login.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="76453b3a-f37b-4659-9400-7985382d7c63"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ec2f75ab-0144-4ad0-960b-fa36a81aeac8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PTT Login.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d9377379-f67f-4fa6-8486-64ea4a6b1570"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c6d7e67e-a484-4946-8da5-735715b8fdac"
+            name="MessageOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6fe00089-e120-4f86-b29f-dae1170d97b4"
+            name="MessageOccurrenceSpecification19">
+            <covered>
+              <lifelineMoniker
+                Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="394ed072-ee0c-412e-8ff4-fc83a6f3597a"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="b4d4a6c4-d621-4a80-80aa-ab2d8ea58c00"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="77501770-f420-4d88-a29e-a65dbc2aea68"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PTT Login.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="70143b9c-b00a-4b1e-a1af-f9720fd22bd5"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="531a4833-8fdc-4947-8332-a2236dac1570"
+                LastKnownName="User"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4e4f4aaf-f9d3-41bf-b760-e879a9ecc48f"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="465f8349-1083-46e7-aec6-62fc8f8d14b3"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="94ead7fb-e362-41d9-8ddf-8a4a7bf8e440"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PTT Login.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="531a4833-8fdc-4947-8332-a2236dac1570"
+            name="User"
+            isActor="false"
+            lifelineDisplayName="User">
+            <represents>
+              <propertyMoniker
+                Id="a2e09680-4c3e-4af8-88e4-80727dd27353"
+                LastKnownLocation="PTT Login.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="1ac62a0b-ced8-4db2-b53e-1c7034e2c8d8"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5ee84c81-c38e-424b-9ac9-3b698fdc09fb"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c1ddeb9b-270a-4dcc-b6fd-879e92f2e6d3"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="PTT Login.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="70143b9c-b00a-4b1e-a1af-f9720fd22bd5"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="PTT Login.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="2092a269-0c62-4862-98b1-d7bcc5bd32e4"
+            name="PTT Application"
+            isActor="false"
+            lifelineDisplayName="PTT Application">
+            <represents>
+              <propertyMoniker
+                Id="53aef62c-9fb7-4ecf-99ac-b80abde77bf2"
+                LastKnownLocation="PTT Login.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="62a0f1e8-d084-400c-8e37-55343ea299c7"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="PTT Login.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="b1599098-31b4-41e6-81e9-66cb865fd674"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="PTT Login.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a312172c-2e15-4312-b589-f5687de66b4e"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="PTT Login.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="465f8349-1083-46e7-aec6-62fc8f8d14b3"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="PTT Login.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="9e2a9293-e696-47ed-b744-70e944ee8fa6"
+            name="Database"
+            isActor="false"
+            lifelineDisplayName="Database">
+            <represents>
+              <propertyMoniker
+                Id="55c916db-a3e7-4779-bf21-9ffb86a00965"
+                LastKnownLocation="PTT Login.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="0a0ed1c8-346a-47ba-84c6-2b5798489509"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="PTT Login.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="6661a5c3-8b0c-40e6-9618-774f3dfaa065"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="PTT Login.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="76453b3a-f37b-4659-9400-7985382d7c63"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="PTT Login.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="b4d4a6c4-d621-4a80-80aa-ab2d8ea58c00"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="PTT Login.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="c70939d1-a082-4d24-b12d-18995f79027b"
+            name="Login Page Request"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1ac62a0b-ced8-4db2-b53e-1c7034e2c8d8"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="PTT Login.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="91f3e230-ffcd-48aa-a35f-899928b8f998"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="PTT Login.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="23fc09f0-bed6-43d4-b561-a0d98f614422"
+            name="Loads Login Page"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c70cfa5b-5364-4cd7-85b8-ef387e722647"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="PTT Login.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5ee84c81-c38e-424b-9ac9-3b698fdc09fb"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="PTT Login.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8692a806-178f-4ed0-aa97-c0eabe3d24d4"
+            name="Enters Login Credential"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c1ddeb9b-270a-4dcc-b6fd-879e92f2e6d3"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="PTT Login.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="da62c05f-98bf-444e-b9cb-a078bd03e3c6"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="PTT Login.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="a09f15b7-321b-4d39-8a20-aa963d2f5a95"
+            name="Opens Database Connection"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0d17e647-5601-461d-8467-b85db536647f"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="PTT Login.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6a6fb967-d000-4319-bf7f-9bd6863c6e3f"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="PTT Login.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8257b5d6-c924-447e-8a59-987d4c42b70f"
+            name="Connection ACK"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="51b467d3-539c-422f-9de2-eee8a36c54f3"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="PTT Login.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ecc40d9e-86c5-4185-b9d6-0678367bd051"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="PTT Login.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e3e97428-e15e-463c-9119-3fb44ccbac22"
+            name="Sends Login Credentials"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d9377379-f67f-4fa6-8486-64ea4a6b1570"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="PTT Login.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c6d7e67e-a484-4946-8da5-735715b8fdac"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="PTT Login.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5bf9519b-90c2-49d9-96c4-73886abdea7f"
+            name="Sends Result to query"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6fe00089-e120-4f86-b29f-dae1170d97b4"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="PTT Login.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="394ed072-ee0c-412e-8ff4-fc83a6f3597a"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="PTT Login.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="2a8f9390-0cb5-4612-a49e-3388601e8cbd"
+            name="Menu Page"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4e4f4aaf-f9d3-41bf-b760-e879a9ecc48f"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="PTT Login.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="70143b9c-b00a-4b1e-a1af-f9720fd22bd5"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="PTT Login.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="a2e09680-4c3e-4af8-88e4-80727dd27353"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="10eaf28e-35b8-4b67-a9e8-28bbd8b7f0ef"
+                LastKnownName="User"
+                LastKnownLocation="PTT Login.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="53aef62c-9fb7-4ecf-99ac-b80abde77bf2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="3161924e-2a63-49e3-a59e-d186d5952419"
+                LastKnownName="PTT Application"
+                LastKnownLocation="PTT Login.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="55c916db-a3e7-4779-bf21-9ffb86a00965"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="112cf9b7-45c8-497b-9ac7-759d0a4b3f6a"
+                LastKnownName="Database"
+                LastKnownLocation="PTT Login.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="80ea9218-e1ec-4be3-a77d-527d1743f6f1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f2247f00-782b-48c1-aadf-8dddc3f5bbb2"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a5d8dbbd-7c10-4de9-b809-01126d511b5b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="94ead7fb-e362-41d9-8ddf-8a4a7bf8e440"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3b79b616-0b16-42ba-a303-75c49ff44754"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ad2dc5b1-2d75-4f71-952e-9a529215e65f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ec2f75ab-0144-4ad0-960b-fa36a81aeac8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="77501770-f420-4d88-a29e-a65dbc2aea68"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

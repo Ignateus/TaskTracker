@@ -1,10 +1,17 @@
-﻿using System.Reflection;
+﻿////-----------------------------------------------------------------------
+//// <copyright file="AssemblyInfo.cs" company"UTD">
+////     Copyright (c) Sprocket Enterprises. All rights reserved.
+//// </copyright>
+//// <author>Software Engineering Project</author>
+////-----------------------------------------------------------------------
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
+//// General Information about an assembly is controlled through the following 
+//// set of attributes. Change these attribute values to modify the information
+//// associated with an assembly.
 [assembly: AssemblyTitle("PTT")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]

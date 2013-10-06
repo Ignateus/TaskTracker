@@ -17,11 +17,14 @@
         <asp:Button ID="Button3" runat="server" Text="Task" />
         <asp:Button ID="Button4" runat="server" Text="Admin" />
         <asp:Button ID="Button5" runat="server" Text="Contacts" />
-        <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" />
+        <asp:Button ID="btnLogout" runat="server" OnClick="BtnLogout_Click" Text="Logout" />
         <br />
         <br />
         <asp:Button ID="sample" runat="server" Text="sample" Visible="false" />
         <asp:TextBox ID="txtAccessControl" runat="server" Visibile="false"></asp:TextBox>
+
+        <br />
+        <asp:Label ID="role" runat="server" />
     </form>
 </body>
 </html>

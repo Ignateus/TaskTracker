@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <asp:Button ID="btnPrevPage" runat="server" Text ="Prev Page" Width ="80" CssClass ="ButtonsNormal" OnClick="btnPrevPage_Click" />
+    <asp:Button ID="btnPrevPage" runat="server" Text ="Prev Page" Width ="80" CssClass ="ButtonsNormal" OnClick="BtnPrevPage_Click" />
     </div>
     </form>
 </body>
