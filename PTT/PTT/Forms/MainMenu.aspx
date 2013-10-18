@@ -15,13 +15,13 @@
         <asp:Button ID="Button1" runat="server" Text="Main Menu" />
         <asp:Button ID="Button2" runat="server" Text="Project" />
         <asp:Button ID="Button3" runat="server" Text="Task" />
-        <asp:Button ID="Button4" runat="server" Text="Admin" />
-        <asp:Button ID="Button5" runat="server" Text="Contacts" />
+        <asp:Button ID="Admin" runat="server" Text="Admin" OnClick="Admin_Click" />
+        <asp:Button ID="Contacts" runat="server" Text="Contacts" OnClick="Contacts_Click" />
         <asp:Button ID="btnLogout" runat="server" OnClick="BtnLogout_Click" Text="Logout" />
         <br />
         <br />
         <asp:Button ID="sample" runat="server" Text="sample" Visible="false" />
-        <asp:TextBox ID="txtAccessControl" runat="server" Visibile="false"></asp:TextBox>
+       
 
         <br />
         <asp:Label ID="role" runat="server" />

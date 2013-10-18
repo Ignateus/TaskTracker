@@ -57,6 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\NewRole.aspx" />
+    <Content Include="Admin\NewTeam.aspx" />
+    <Content Include="Admin\Role.aspx" />
+    <Content Include="Admin\Team.aspx" />
+    <Content Include="Contacts\NewContacts.aspx" />
+    <Content Include="Forms\Admin.aspx" />
+    <Content Include="Contacts\Contacts.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Tracker_Styles.css" />
     <Content Include="Usr_Ctl\Footer.aspx" />
@@ -65,6 +72,55 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\NewRole.aspx.cs">
+      <DependentUpon>NewRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewRole.aspx.designer.cs">
+      <DependentUpon>NewRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewTeam.aspx.cs">
+      <DependentUpon>NewTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewTeam.aspx.designer.cs">
+      <DependentUpon>NewTeam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Role.aspx.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Role.aspx.designer.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Team.aspx.cs">
+      <DependentUpon>Team.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Team.aspx.designer.cs">
+      <DependentUpon>Team.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\NewContacts.aspx.cs">
+      <DependentUpon>NewContacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts\NewContacts.aspx.designer.cs">
+      <DependentUpon>NewContacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts\Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts\Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

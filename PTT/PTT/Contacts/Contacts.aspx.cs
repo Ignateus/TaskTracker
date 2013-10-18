@@ -1,10 +1,10 @@
 ﻿////-----------------------------------------------------------------------
-//// <copyright file="MainMenu.aspx.cs" company="UTD">
-//// Copyright (c) UTD. All rights reserved.
+//// <copyright file="Contacts.aspx.cs" company="Sprocket Enterprises">
+////     Copyright (c) Sprocket Enterprises. All rights reserved.
 //// </copyright>
-//// <author>Software Engineering Project</author>
+//// <author>John Doe</author>
 ////-----------------------------------------------------------------------
-namespace PTT.Usr_Ctl
+namespace PTT.Forms
 {
     using System;
     using System.Collections.Generic;
@@ -18,17 +18,18 @@ namespace PTT.Usr_Ctl
     using System.Web.UI.WebControls;
 
     /// <summary>
-    /// Code for the main menu page
+    /// This is the code for Contacts Page
     /// </summary>
-    public partial class MainMenu : System.Web.UI.Page
+    public partial class Contacts : System.Web.UI.Page
     {
         /// <summary>
-        /// Page Load for Main Menu
+        /// This code will initiate during page load
         /// </summary>
         /// <param name="sender">not needed</param>
-        /// <param name="e">not needed 6</param>
+        /// <param name="e">not needed 42</param>
         protected void Page_Load(object sender, EventArgs e)
         {
+            ////Regular Page Load
             SqlConnection con1 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
             SqlDataAdapter da1;
             string mySql1 = "select AccessLevel from tblAccess where AccessID = '1'";
@@ -40,42 +41,22 @@ namespace PTT.Usr_Ctl
             int nextID = (int)cmmd.ExecuteScalar();
             if (nextID.Equals(1))
             {
-                this.Admin.Visible = false;
+                this.NewUser.Visible = false;
             }
             else
             {
-                this.Admin.Visible = true;
+                this.NewUser.Visible = true;
             }
         }
-   
-        /// <summary>
-        /// Button for logout which would take the user to the login page
-        /// </summary>
-        /// <param name="sender">not needed</param>
-        /// <param name="e">not needed 7</param>
-        protected void BtnLogout_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("../Login.aspx");
-        }
 
         /// <summary>
-        /// This code will initiate when admin is clicked
+        /// This code will initiate when NewUser button is clicked
         /// </summary>
         /// <param name="sender">not needed</param>
-        /// <param name="e">not needed 45</param>
-        protected void Admin_Click(object sender, EventArgs e)
+        /// <param name="e">not needed 43</param>
+        protected void NewUser_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Admin.aspx");
-        }
-
-        /// <summary>
-        /// This code will initiate when contacts is clicked
-        /// </summary>
-        /// <param name="sender">not needed</param>
-        /// <param name="e">not needed 33</param>
-        protected void Contacts_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("../Contacts/Contacts.aspx");
+            Response.Redirect("NewContacts.aspx");
         }
     }
 }

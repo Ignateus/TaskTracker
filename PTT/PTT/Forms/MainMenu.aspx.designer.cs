@@ -49,22 +49,22 @@ namespace PTT.Usr_Ctl {
         protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
-        /// Button4 control.
+        /// Admin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button Admin;
         
         /// <summary>
-        /// Button5 control.
+        /// Contacts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.Button Contacts;
         
         /// <summary>
         /// btnLogout control.
@@ -83,15 +83,6 @@ namespace PTT.Usr_Ctl {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button sample;
-        
-        /// <summary>
-        /// txtAccessControl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAccessControl;
         
         /// <summary>
         /// role control.

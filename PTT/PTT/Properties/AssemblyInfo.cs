@@ -1,10 +1,9 @@
 ﻿////-----------------------------------------------------------------------
-//// <copyright file="AssemblyInfo.cs" company"UTD">
-////     Copyright (c) Sprocket Enterprises. All rights reserved.
+//// <copyright file="AssemblyInfo.cs" company="UTD">
+//// Copyright (c) Sprocket Enterprises. All rights reserved.
 //// </copyright>
 //// <author>Software Engineering Project</author>
 ////-----------------------------------------------------------------------
-
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
