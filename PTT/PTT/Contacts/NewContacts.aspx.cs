@@ -1,8 +1,8 @@
 ﻿////-----------------------------------------------------------------------
-//// <copyright file="NewContacts.aspx.cs" company="Sprocket Enterprises">
-////     Copyright (c) Sprocket Enterprises. All rights reserved.
+//// <copyright file="NewContacts.aspx.cs" company="Advance Software Engineering Project">
+////     Copyright (c) Advance Software Engineering Project. All rights reserved.
 //// </copyright>
-//// <author>John Doe</author>
+//// <author>PTT Team</author>
 ////-----------------------------------------------------------------------
 namespace PTT.Contacts
 {
@@ -52,29 +52,37 @@ namespace PTT.Contacts
         protected void BtnSave_Click(object sender, EventArgs e)
         {
             ////connection string
-            SqlConnection con1 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
-            SqlDataAdapter da1;
-            string mySql1 = "select MAX(UserID) from tblUser";
-            ////Query to update access level in the table
-            DataSet dsView = new DataSet();
-            da1 = new SqlDataAdapter(mySql1, con1);
-            con1.Open();
-            SqlCommand cmmd = new SqlCommand(mySql1, con1);
-            int nextID = (int)cmmd.ExecuteScalar();
-            nextID = nextID + 1;
-            con1.Close();
-            SqlConnection con2 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
-            SqlDataAdapter da2;
-            ////SqlDataReader reader;
-            string mySql2 = "INSERT INTO tblUser (UserID, UserName, Password, FirstName, LastName, Role, AdminLevel, Team, Email, Phone) VALUES (" + nextID + ", '" + txtUserName.Text + "', '" + txtPassword.Text + "', '" + txtFirstName.Text + "', '" + txtLastName.Text + "', '" + DropDownList1.Text + "', '" + drpAdminLvl.Text + "' , '" + DropDownList3.Text + "', '" + txtEmail.Text + "', '" + txtPhone.Text + "')";
-            ////Query to update access level in the table
-            DataSet dsView2 = new DataSet();
-            da2 = new SqlDataAdapter(mySql2, con2);
-            con2.Open();
-            SqlCommand cmmd2 = new SqlCommand(mySql2, con2);
-            SqlDataReader reader = cmmd2.ExecuteReader();
-            con2.Close();
-            Response.Redirect("Contacts.aspx");
+            try
+            {
+                SqlConnection con1 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
+                SqlDataAdapter da1;
+                string mySql1 = "select MAX(UserID) from tblUser";
+                ////Query to update access level in the table
+                DataSet dsView = new DataSet();
+                da1 = new SqlDataAdapter(mySql1, con1);
+                con1.Open();
+                SqlCommand cmmd = new SqlCommand(mySql1, con1);
+                int nextID = (int)cmmd.ExecuteScalar();
+                nextID = nextID + 1;
+                con1.Close();
+                SqlConnection con2 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
+                SqlDataAdapter da2;
+                ////SqlDataReader reader;
+                string mySql2 = "INSERT INTO tblUser (UserID, UserName, Password, FirstName, LastName, Role, AdminLevel, Team, Email, Phone) VALUES (" + nextID + ", '" + this.txtUserName.Text + "', '" + this.txtPassword.Text + "', '" + this.txtFirstName.Text + "', '" + this.txtLastName.Text + "', '" + this.DropDownList1.Text + "', '" + this.drpAdminLvl.Text + "' , '" + this.DropDownList3.Text + "', '" + this.txtEmail.Text + "', '" + this.txtPhone.Text + "')";
+                ////Query to update access level in the table
+                DataSet dsView2 = new DataSet();
+                da2 = new SqlDataAdapter(mySql2, con2);
+                con2.Open();
+                SqlCommand cmmd2 = new SqlCommand(mySql2, con2);
+                SqlDataReader reader = cmmd2.ExecuteReader();
+                con2.Close();
+                Response.Redirect("Contacts.aspx");
+            }
+            catch (SqlException sqle)
+            {
+                Response.Write("<script>alert('Username already taken. Kindly use another username.')</script>");
+                Console.WriteLine("Username already taken. Kindly use another username.", sqle);
+            }
         }
     }
 }

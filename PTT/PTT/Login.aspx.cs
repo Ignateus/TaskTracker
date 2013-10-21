@@ -1,8 +1,8 @@
 ﻿////-----------------------------------------------------------------------
-//// <copyright file="Login.aspx.cs" company="Sprocket Enterprises">
-////     Copyright (c) Sprocket Enterprises. All rights reserved.
+//// <copyright file="Login.aspx.cs" company="Advance Software Engineering Project">
+////     Copyright (c) Advance Software Engineering Project. All rights reserved.
 //// </copyright>
-//// <author>John Doe</author>
+//// <author>PTT Team</author>
 ////-----------------------------------------------------------------------
 namespace PTT
 {

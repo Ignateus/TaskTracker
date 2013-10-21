@@ -54,7 +54,7 @@ namespace PTT.Admin
             SqlConnection con2 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
             SqlDataAdapter da2;
             ////SqlDataReader reader;
-            string mySql2 = "INSERT INTO Team (TeamID, TeamName) VALUES (" + nextID + ",'" + txtNewTeam.Text + "')";
+            string mySql2 = "INSERT INTO Team (TeamID, TeamName) VALUES (" + nextID + ",'" + this.txtNewTeam.Text + "')";
             ////Query to update access level in the table
             DataSet dsView2 = new DataSet();
             da2 = new SqlDataAdapter(mySql2, con2);

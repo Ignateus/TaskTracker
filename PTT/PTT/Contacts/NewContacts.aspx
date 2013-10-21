@@ -44,7 +44,7 @@
         <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
         <p>
             <asp:Button ID="btnSave" runat="server" Text="SAVE" OnClick="BtnSave_Click" />
-            <asp:Button ID="btnCancel" runat="server" Text="CANCEL" OnClick="=BtnCancel_Click" />
+            <asp:Button ID="btnCancel" runat="server" Text="CANCEL" OnClick="BtnCancel_Click" />
         </p>
     </form>
 </body>
