@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTT", "PTT\PTT.csproj", "{164D54E5-ED2A-4BDD-A737-DF2772DD989A}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "PTT Login", "PTT Login\PTT Login.modelproj", "{480970AC-E10D-4CA0-B14B-372F2E3A8796}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Test|Any CPU = Test|Any CPU
+		Test|x64 = Test|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Debug|x64.ActiveCfg = Debug|x64
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Debug|x64.Build.0 = Debug|x64
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Release|x64.ActiveCfg = Release|x64
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Release|x64.Build.0 = Release|x64
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Test|Any CPU.Build.0 = Test|Any CPU
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Test|x64.ActiveCfg = Test|x64
+		{164D54E5-ED2A-4BDD-A737-DF2772DD989A}.Test|x64.Build.0 = Test|x64
+		{480970AC-E10D-4CA0-B14B-372F2E3A8796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480970AC-E10D-4CA0-B14B-372F2E3A8796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480970AC-E10D-4CA0-B14B-372F2E3A8796}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{480970AC-E10D-4CA0-B14B-372F2E3A8796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480970AC-E10D-4CA0-B14B-372F2E3A8796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{480970AC-E10D-4CA0-B14B-372F2E3A8796}.Release|x64.ActiveCfg = Release|Any CPU
+		{480970AC-E10D-4CA0-B14B-372F2E3A8796}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{480970AC-E10D-4CA0-B14B-372F2E3A8796}.Test|x64.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
