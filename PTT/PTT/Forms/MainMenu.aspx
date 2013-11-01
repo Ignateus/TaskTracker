@@ -13,7 +13,7 @@
     </div>
                 
         <asp:Button ID="Button1" runat="server" Text="Main Menu" />
-        <asp:Button ID="Button2" runat="server" Text="Project" />
+        <asp:Button ID="Project" runat="server" Text="Project" OnClick="Project_Click" />
         <asp:Button ID="Button3" runat="server" Text="Task" />
         <asp:Button ID="Admin" runat="server" Text="Admin" OnClick="Admin_Click" />
         <asp:Button ID="Contacts" runat="server" Text="Contacts" OnClick="Contacts_Click" />

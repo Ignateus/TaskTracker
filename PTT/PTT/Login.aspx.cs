@@ -31,6 +31,8 @@ using System.Web.UI.WebControls;
         {
             ////To implement access control I am using this text box to store the flag and 
             txtAccessControl.Visible = false;
+            txtUserID.Visible = false;
+            txtPMName.Visible = false;
         }
 
         /// <summary>
@@ -54,7 +56,7 @@ using System.Web.UI.WebControls;
                 ////connection string
                 SqlConnection con1 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
                 SqlDataAdapter da1;
-                string mySql1 = "select AdminLevel from tblUser where UserName = '" + txtUsername.Text + "'"; 
+                string mySql1 = "select AdminLevel, UserID, FirstName from tblUser where UserName = '" + txtUsername.Text + "'"; 
                 ////Query to update access level in the table
                 DataSet dsView = new DataSet();
                 da1 = new SqlDataAdapter(mySql1, con1);
@@ -63,11 +65,13 @@ using System.Web.UI.WebControls;
                 SqlDataReader readerA = cmmd.ExecuteReader();                          
                 while (readerA.Read())
                 {
-                    txtAccessControl.Text = readerA["AdminLevel"].ToString();                    
+                    txtAccessControl.Text = readerA["AdminLevel"].ToString();
+                    txtUserID.Text = readerA["UserID"].ToString();
+                    txtPMName.Text = readerA["FirstName"].ToString();
                     SqlConnection con3 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader reader;
-                    cmd.CommandText = "UPDATE tblAccess SET AccessLevel = '" + txtAccessControl.Text + "' WHERE AccessID = '1'";
+                    cmd.CommandText = "UPDATE tblAccess SET AccessLevel = '" + txtAccessControl.Text + "', UserID = '" + txtUserID.Text + "', PMName = '" + txtPMName.Text + "' WHERE AccessID = '1'";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con3;
                     con3.Open();

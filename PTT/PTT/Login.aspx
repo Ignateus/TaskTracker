@@ -78,6 +78,8 @@
             &nbsp;</p>
         <p>
             ***New Users : Contact Admin***</p>
+        <asp:TextBox ID="txtUserID" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtPMName" runat="server"></asp:TextBox>
     </form>
 </body>
 </html>

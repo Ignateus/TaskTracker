@@ -65,6 +65,9 @@
     <Content Include="Forms\Admin.aspx" />
     <Content Include="Contacts\Contacts.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Projects\EditProjects.aspx" />
+    <Content Include="Projects\ListProjects.aspx" />
+    <Content Include="Projects\NewProjects.aspx" />
     <Content Include="Tracker_Styles.css" />
     <Content Include="Usr_Ctl\Footer.aspx" />
     <Content Include="Usr_Ctl\Header.aspx" />
@@ -128,6 +131,27 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\EditProjects.aspx.cs">
+      <DependentUpon>EditProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\EditProjects.aspx.designer.cs">
+      <DependentUpon>EditProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ListProjects.aspx.cs">
+      <DependentUpon>ListProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\ListProjects.aspx.designer.cs">
+      <DependentUpon>ListProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\NewProjects.aspx.cs">
+      <DependentUpon>NewProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects\NewProjects.aspx.designer.cs">
+      <DependentUpon>NewProjects.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usr_Ctl\Footer.aspx.cs">

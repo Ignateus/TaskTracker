@@ -77,5 +77,15 @@ namespace PTT.Usr_Ctl
         {
             Response.Redirect("../Contacts/Contacts.aspx");
         }
+
+        /// <summary>
+        /// This code will initiate when contacts is clicked
+        /// </summary>
+        /// <param name="sender">not needed</param>
+        /// <param name="e">not needed 58</param>
+        protected void Project_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Projects/ListProjects.aspx");
+        }
     }
 }
