@@ -1,8 +1,8 @@
 ﻿////-----------------------------------------------------------------------
-//// <copyright file="Login.aspx.cs" company="Sprocket Enterprises">
-////     Copyright (c) Sprocket Enterprises. All rights reserved.
+//// <copyright file="Login.aspx.cs" company="Advance Software Engineering Project">
+////     Copyright (c) Advance Software Engineering Project. All rights reserved.
 //// </copyright>
-//// <author>John Doe</author>
+//// <author>PTT Team</author>
 ////-----------------------------------------------------------------------
 namespace PTT
 {
@@ -63,7 +63,7 @@ using System.Web.UI.WebControls;
                 SqlDataReader readerA = cmmd.ExecuteReader();                          
                 while (readerA.Read())
                 {
-                    txtAccessControl.Text = readerA["AdminLevel"].ToString();
+                    txtAccessControl.Text = readerA["AdminLevel"].ToString();                    
                     SqlConnection con3 = new SqlConnection("Data Source=.\\sqldeveloper; Initial Catalog=PTT; Integrated Security=SSPI");
                     SqlCommand cmd = new SqlCommand();
                     SqlDataReader reader;

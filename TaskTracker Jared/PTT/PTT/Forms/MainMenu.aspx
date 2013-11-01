@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Main Menu</title>
 
-     <style type="text/css"> 
+    <style type="text/css"> 
         body
         {
             background-color:#66CCFF;
@@ -86,7 +86,7 @@
             document.getElementById('mainMenuL').className = "inactive";
             document.getElementById('projectL').className = "inactive";
             document.getElementById('taskL').className = "inactive";
-            document.getElementById('adminL').className = "inactive";
+            //document.getElementById('adminL').className = "inactive";
             document.getElementById('contactsL').className = "inactive";
 
             //Make selected tab have css class active
@@ -104,17 +104,25 @@
 
 </head>
 <body>
-    
     <form id="form1" runat="server">
-       
+    <div>
+    
+    </div>
+             
         <div id="tabs"> 
             <ul class="tabList"> 
-                <li><a id='mainMenuL' href="javascript:activateTab('mainMenuSection', 'mainMenuL')" class='active'>Main Menu</a></li> 
+                <li><a id='mainMenuL' href="javascript:activateTab('mainMenuSection', 'mainMenuL')"  class='active'>Main Menu</a></li> 
                 <li><a id='projectL' href="javascript:activateTab('projectSection', 'projectL')">Project</a></li> 
                 <li><a id='taskL' href="javascript:activateTab('taskSection', 'taskL')">Task</a></li>
-                <li><a id='adminL' href="javascript:activateTab('adminSection', 'adminL')">Admin</a></li>
-                <li><a id='contactsL' href="javascript:activateTab('contactsSection', 'contactsL')">Contacts</a></li>
-            </ul> 
+                <%--<li><a id='adminL' href="javascript:activateTab('adminSection', 'adminL')">Admin</a></li>--%>
+                <%--<li><a id='contactsL' href="javascript:activateTab('contactsSection', 'contactsL')">Contacts</a></li>--%>
+                <li><a id='contactsL' href="../Contacts/Contacts.aspx">Contacts</a></li>
+            </ul>
+            <div id="adminD" runat="server">
+                <ul class="tabList">
+                    <li><a id='adminL' href="Admin.aspx">Admin</a></li>
+                </ul>
+            </div>
         </div>
 
         <div style="float:right">
@@ -144,19 +152,19 @@
             <div id="adminSection" style="display: none;">Admin Screen</div>
             <div id="contactsSection" style="display: none;">Contacts Screen</div>
         </div>
-            
+        <%--   
         <asp:Button ID="Button1" runat="server" Text="Main Menu" />
         <asp:Button ID="Button2" runat="server" Text="Project" />
         <asp:Button ID="Button3" runat="server" Text="Task" />
-        <asp:Button ID="Button4" runat="server" Text="Admin" />
-        <asp:Button ID="Button5" runat="server" Text="Contacts" />
+        <asp:Button ID="Admin" runat="server" Text="Admin" OnClick="Admin_Click" />
+        <asp:Button ID="Contacts" runat="server" Text="Contacts" OnClick="Contacts_Click" />
         <br />
         <br />
         <asp:Button ID="sample" runat="server" Text="sample" Visible="false" />
-        <asp:TextBox ID="txtAccessControl" runat="server" Visibile="false"></asp:TextBox>
+       
 
         <br />
-        <asp:Label ID="role" runat="server" />
+        <asp:Label ID="role" runat="server" />--%>
     </form>
 </body>
 </html>
