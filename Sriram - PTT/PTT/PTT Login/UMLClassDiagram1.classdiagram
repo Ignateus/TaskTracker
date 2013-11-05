@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9a093190-a5e3-42da-ba18-3ba14a3840e8" name="UMLClassDiagram1" linkedPackageId="1392f020-1aa6-4272-83bd-dce396827d94" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="2b36fd60-81b6-4422-b945-77540a78cf44">
+      <profileInstance Id="ca7faa1a-98a6-404c-baf5-915321746b8e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d667d4fd-a814-438e-bf01-73136dfdc0dc">
+      <profileInstance Id="3dd8cef9-d641-4a6e-8034-26d2bfabb1e6" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6ba5d8cf-8e05-4c0d-89f8-4c87f021b340" name="PTT Application" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3161924e-2a63-49e3-a59e-d186d5952419" />
+        <targetEnds>
+          <association Id="0c8f0fb7-138d-47c3-9bf5-b807c9e0f693" isDerived="false" sourceEndRoleName="PTT Application" targetEndRoleName="Database" isLeaf="false" isAbstract="false">
+            <classMoniker Id="22739835-85e5-48bf-8a7c-38280c5c1552" LastKnownName="Database" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a576784e-4020-47ac-8a85-53e0f286b633" name="PTT Application" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fc393e19-ef8b-4f78-995f-454a2d3de00d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e6ce8179-5ff4-4690-87ca-f826e1852082" name="Database" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8938e7f9-7e7e-4003-92ac-4539895bf671" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6d69e108-6f07-4073-81e9-99760f9eaa60" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="2b525f8b-0702-4afe-8017-27a2b0ac3e02" name="ConnectToDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7d581b4c-2340-454e-83c5-1aed9b07f8b5" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4a62e469-9e9f-44f3-b1e8-30caefe10932" name="User" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="10eaf28e-35b8-4b67-a9e8-28bbd8b7f0ef" />
+        <targetEnds>
+          <association Id="190aea26-8776-488f-9a8b-9891d304d561" isDerived="false" sourceEndRoleName="User" targetEndRoleName="PTT Application" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6ba5d8cf-8e05-4c0d-89f8-4c87f021b340" LastKnownName="PTT Application" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8afe3a34-d0e0-4c73-97d1-59978d40ac89" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="3b113d8c-fd7f-4f72-bbd8-15edbb52a48c" name="Lower" value="*">
+                      <elementDefinition Id="34d258cb-a8b2-42de-a7f5-6447c1dc6905" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f02491e4-f49f-4fb8-999d-888894c65e2e" name="Upper" value="*">
+                      <elementDefinition Id="4f78a775-8809-46f8-bf47-8555cee0ead0" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="d4d8e9ee-1389-4d05-99a2-c99be39c6f18" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2c1520bc-2b95-498d-bb3d-31a612a48753" name="PTT Application" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2d486262-fa3d-463d-b841-664c4a26a858" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9cb40ff2-bed0-4c92-8d95-6dcaf3691708" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="cc4770bd-abfa-4b4e-af70-9300e4519950" name="UserName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="97779ee6-5052-44b6-98bf-b41f0bb30425" />
+          </property>
+          <property Id="366e5ebd-e31c-4a70-9142-d152f5f6a1a9" name="Password" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="625b313f-f033-4405-abae-b8fc3b92e4b3" />
+          </property>
+          <property Id="8263a638-52d7-4334-b69a-b86189e1a179" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="db6bba34-756c-4505-a5ce-8ae7e3e5a555" />
+          </property>
+          <property Id="5b7e84d8-da89-464e-8b97-980974bf019b" name="Phone" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a0c57f7b-43a3-4a24-b8f6-b6254a544985" />
+          </property>
+          <property Id="e73b7a18-df92-4db5-9cc3-0edeab75e56c" name="Role" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="84e3ed47-848f-48a9-b633-2398483aae27" />
+          </property>
+          <property Id="019e5241-af4e-4039-9d96-38591101ab9b" name="AdminLevel" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2ef312c6-1078-48e0-916b-845da164d6de" />
+          </property>
+          <property Id="4b2cdc3a-c8fb-419b-87b1-44a3d5ea5b06" name="FirstName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="36e13e1e-c2df-4fee-8b37-3fae2a818a8a" />
+          </property>
+          <property Id="2de396ff-991e-4649-a626-760389b4678d" name="LastName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b22dbc2c-144a-4091-9b04-57d1844bb932" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="45fc8c03-97f0-4161-9aba-47f5a6538482" name="Logout" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="414fdd92-34cf-4ef6-b1f1-49e70908d2dd" />
+          </operation>
+          <operation Id="8f32e263-1e1b-4cc0-9a9b-9c8f946412f5" name="Login" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="08230647-8184-4268-8949-2ea572f29a0c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="22739835-85e5-48bf-8a7c-38280c5c1552" name="Database" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="112cf9b7-45c8-497b-9ac7-759d0a4b3f6a" />
+        <ownedAttributesInternal>
+          <property Id="8ad0e1b6-82b5-4bb8-be99-1d9ccbcec22d" name="tblUser" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="02395bc4-ed13-4464-aa86-adb180c1be1a" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="58fb9528-c1a0-4740-afbe-f5b7c5e30ac3" name="EnforceConstraints" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d0ba1ed1-42a6-49ab-b961-310de1dc8de7" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="1392f020-1aa6-4272-83bd-dce396827d94" name="PTT Login">
+    <elementDefinition Id="67de25b2-1c1e-4d8d-9f1d-479e22374911" />
+  </package>
+</logicalClassDesignerModel>
