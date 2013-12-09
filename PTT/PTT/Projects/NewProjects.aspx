@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:Button ID="ListProjects" runat="server" Text="List Projects" OnClick="ListProjects_Click" />
+        <%--<asp:Button ID="ListProjects" runat="server" Text="List Projects" OnClick="ListProjects_Click" />--%>
     
     </div>
         Project Number<asp:TextBox ID="txtProjectNo" runat="server"></asp:TextBox>

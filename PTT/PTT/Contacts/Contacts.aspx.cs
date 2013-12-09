@@ -8,6 +8,7 @@ namespace PTT.Forms
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data;
     using System.Data.OleDb;
     using System.Data.Sql;
@@ -30,7 +31,8 @@ namespace PTT.Forms
         protected void Page_Load(object sender, EventArgs e)
         {
             ////Regular Page Load
-            SqlConnection con1 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
+            string connString = ConfigurationManager.ConnectionStrings["TaskTrackerConnectionString"].ToString();
+            SqlConnection con1 = new SqlConnection(connString);
             SqlDataAdapter da1;
             string mySql1 = "select AccessLevel from tblAccess where AccessID = '1'";
             ////Query to update access level in the table

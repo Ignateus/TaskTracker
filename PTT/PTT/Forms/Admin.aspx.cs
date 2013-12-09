@@ -17,7 +17,7 @@ namespace PTT.Forms
     /// This is the code for Admin Page
     /// </summary>
     public partial class Admin : System.Web.UI.Page
-    {
+    {        
         /// <summary>
         /// This code will initiate during page load
         /// </summary>
@@ -25,6 +25,11 @@ namespace PTT.Forms
         /// <param name="e">not needed 32</param>
         protected void Page_Load(object sender, EventArgs e)
         {
+            object sessionId = HttpContext.Current.Session["Session_State"];
+            if (sessionId == null)
+            {
+                Response.Redirect("../Login.aspx");
+            }
             ////Regular Page Load
         }
 
@@ -66,6 +71,26 @@ namespace PTT.Forms
         protected void Team_Click(object sender, EventArgs e)
         {
             Response.Redirect("../Admin/Team.aspx");
+        }
+
+        /// <summary>
+        /// This code will initiate when New Role button is clicked
+        /// </summary>
+        /// <param name="sender">not needed</param>
+        /// <param name="e">not needed 100</param>
+        protected void NewRole_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Admin/NewRole.aspx");
+        }
+
+        /// <summary>
+        /// This code will initiate when New Team button is clicked
+        /// </summary>
+        /// <param name="sender">not needed</param>
+        /// <param name="e">not needed 104</param>
+        protected void NewTeam_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Admin/NewTeam.aspx");
         }
     }
 }

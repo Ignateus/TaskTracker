@@ -1,10 +1,10 @@
 ﻿////-----------------------------------------------------------------------
-//// <copyright file="NewContacts.aspx.cs" company="Advance Software Engineering Project">
+//// <copyright file="NewTask.aspx.cs" company="Advance Software Engineering Project">
 ////     Copyright (c) Advance Software Engineering Project. All rights reserved.
 //// </copyright>
 //// <author>PTT Team</author>
 ////-----------------------------------------------------------------------
-namespace PTT.Contacts
+namespace PTT.Tasks
 {
     using System;
     using System.Collections.Generic;
@@ -19,46 +19,53 @@ namespace PTT.Contacts
     using System.Web.UI.WebControls;
 
     /// <summary>
-    /// This is the code for New Contacts Page
+    /// This code will initiate during New Task
     /// </summary>
-    public partial class NewContacts : System.Web.UI.Page
+    /// <param name="sender">not needed</param>
+    /// <param name="e">not needed 9</param> 
+    public partial class NewTask : System.Web.UI.Page
     {
         /// <summary>
-        /// This code will initiate during page load
+        /// This code will initiate when Page is loaded
         /// </summary>
         /// <param name="sender">not needed</param>
-        /// <param name="e">not needed 44</param>
+        /// <param name="e">not needed 100</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.drpAdminLvl.Items.Add("0");
-            this.drpAdminLvl.Items.Add("1");
-            this.drpAdminLvl.Items.Add("2");
+            this.DrpStatus.Items.Add("Open");
+            this.DrpStatus.Items.Add("Closed");
+            this.DrpStatus.Items.Add("Cancelled");
+            this.DrpStatus.Items.Add("On Hold");
+            this.DrpType.Items.Add("Individual");
+            this.DrpType.Items.Add("Shared");
+            this.DrpPriority.Items.Add("High");
+            this.DrpPriority.Items.Add("Normal");
+            this.DrpPriority.Items.Add("Low");
         }
 
         /// <summary>
-        /// This code will initiate when Button Cancel is clicked
+        /// This code will initiate when Cancel button is clicked
         /// </summary>
         /// <param name="sender">not needed</param>
-        /// <param name="e">not needed 45</param>
+        /// <param name="e">not needed 100</param>
         protected void BtnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("../Forms/MainMenu.aspx");
         }
 
         /// <summary>
-        /// This code will initiate when Button Save is clicked
+        /// This code will initiate when Cancel button is clicked
         /// </summary>
         /// <param name="sender">not needed</param>
-        /// <param name="e">not needed 47</param>
+        /// <param name="e">not needed 100</param>
         protected void BtnSave_Click(object sender, EventArgs e)
         {
-            ////connection string
-            try
+            try 
             {
                 string connString = ConfigurationManager.ConnectionStrings["TaskTrackerConnectionString"].ToString();
                 SqlConnection con1 = new SqlConnection(connString);
                 SqlDataAdapter da1;
-                string mySql1 = "select MAX(UserID) from tblUser";
+                string mySql1 = "select MAX(TaskID) from tblTask";
                 ////Query to update access level in the table
                 DataSet dsView = new DataSet();
                 da1 = new SqlDataAdapter(mySql1, con1);
@@ -70,7 +77,7 @@ namespace PTT.Contacts
                 SqlConnection con2 = new SqlConnection(connString);
                 SqlDataAdapter da2;
                 ////SqlDataReader reader;
-                string mySql2 = "INSERT INTO tblUser (UserID, UserName, Password, FirstName, LastName, RoleID, AdminLevel, TeamID, Email, Phone) VALUES (" + nextID + ", '" + this.txtUserName.Text + "', '" + this.txtPassword.Text + "', '" + this.txtFirstName.Text + "', '" + this.txtLastName.Text + "', '" + this.DropDownList1.SelectedItem + "', '" + this.drpAdminLvl.Text + "' , '" + this.DropDownList3.SelectedItem + "', '" + this.txtEmail.Text + "', '" + this.txtPhone.Text + "')";
+                string mySql2 = "INSERT INTO tblTask (TaskID, Status, AssignedTo, Type, DueDate, Priority, CreationDate, Notes, ProjectTitle) VALUES (" + nextID + ", '" + this.DrpStatus.Text + "', '" + this.DropDownList2.Text + "', '" + this.DrpType.Text + "', '" + this.TxtDueDate.Text + "', '" + this.DrpPriority.Text + "', '" + DateTime.Now + "' , '" + this.TxtNotes.Text + "', '" + this.DropDownList5.Text + "')";
                 ////Query to update access level in the table
                 DataSet dsView2 = new DataSet();
                 da2 = new SqlDataAdapter(mySql2, con2);
@@ -85,6 +92,16 @@ namespace PTT.Contacts
                 Response.Write("<script>alert('Username already taken. Kindly use another username.')</script>");
                 Console.WriteLine("Username already taken. Kindly use another username.", sqle);
             }
+        }
+
+        /// <summary>
+        /// This code will initiate during calendar selection
+        /// </summary>
+        /// <param name="sender">not needed</param>
+        /// <param name="e">not needed 9</param> 
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            this.TxtDueDate.Text = this.Calendar1.SelectedDate.ToString();
         }
     }
 }

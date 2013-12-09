@@ -24,18 +24,18 @@
             <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
         </p>
         <asp:Label ID="RoleID" runat="server" Text="Role"></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSourceRole" DataTextField="RoleName" DataValueField="RoleName">
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSourceRole" DataTextField="RoleID" DataValueField="RoleID">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSourceRole" runat="server" ConnectionString="<%$ ConnectionStrings:TaskTrackerConnectionString %>" SelectCommand="SELECT [RoleName] FROM [Role]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSourceRole" runat="server" ConnectionString="<%$ ConnectionStrings:TaskTrackerConnectionString %>" SelectCommand="SELECT [RoleID] FROM [Role]"></asp:SqlDataSource>
         <p>
             <asp:Label ID="AdminLevel" runat="server" Text="Admin Level"></asp:Label>
             <asp:DropDownList ID="drpAdminLvl" runat="server">
             </asp:DropDownList>
         </p>
         <asp:Label ID="TeamID" runat="server" Text="Team"></asp:Label>
-        <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSourceTeam" DataTextField="TeamName" DataValueField="TeamName">
+        <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSourceTeam" DataTextField="TeamID" DataValueField="TeamID">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSourceTeam" runat="server" ConnectionString="<%$ ConnectionStrings:TaskTrackerConnectionString %>" SelectCommand="SELECT [TeamName] FROM [Team]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSourceTeam" runat="server" ConnectionString="<%$ ConnectionStrings:TaskTrackerConnectionString %>" SelectCommand="SELECT [TeamID] FROM [Team]"></asp:SqlDataSource>
         <p>
             <asp:Label ID="Email" runat="server" Text="Email"></asp:Label>
             <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>

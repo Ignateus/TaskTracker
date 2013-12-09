@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PTT.Projects {
+namespace PTT.Tasks {
     
     
-    public partial class NewProjects {
+    public partial class NewTask {
         
         /// <summary>
         /// form1 control.
@@ -22,103 +22,94 @@ namespace PTT.Projects {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txtProjectNo control.
+        /// DrpStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProjectNo;
+        protected global::System.Web.UI.WebControls.DropDownList DrpStatus;
         
         /// <summary>
-        /// txtProjectTitle control.
+        /// DropDownList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProjectTitle;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
         
         /// <summary>
-        /// drpPM control.
+        /// SqlDataSource1Person control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpPM;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1Person;
         
         /// <summary>
-        /// SqlDataSourcePM control.
+        /// DrpType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourcePM;
+        protected global::System.Web.UI.WebControls.DropDownList DrpType;
         
         /// <summary>
-        /// drpCategory control.
+        /// TxtDueDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpCategory;
+        protected global::System.Web.UI.WebControls.TextBox TxtDueDate;
         
         /// <summary>
-        /// drpProjectType control.
+        /// Calendar1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpProjectType;
+        protected global::System.Web.UI.WebControls.Calendar Calendar1;
         
         /// <summary>
-        /// drpProjectStatus control.
+        /// DrpPriority control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpProjectStatus;
+        protected global::System.Web.UI.WebControls.DropDownList DrpPriority;
         
         /// <summary>
-        /// txtYear control.
+        /// TxtNotes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtYear;
+        protected global::System.Web.UI.WebControls.TextBox TxtNotes;
         
         /// <summary>
-        /// drpQuarter control.
+        /// DropDownList5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpQuarter;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList5;
         
         /// <summary>
-        /// txtProjectDesc control.
+        /// SqlDataSource1Project control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProjectDesc;
-        
-        /// <summary>
-        /// txtCustomer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCustomer;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1Project;
         
         /// <summary>
         /// BtnSave control.

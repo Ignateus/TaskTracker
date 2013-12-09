@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PTT.Forms {
+namespace PTT.Tasks {
     
     
-    public partial class Admin {
+    public partial class ListTasks {
         
         /// <summary>
         /// form1 control.
@@ -22,13 +22,22 @@ namespace PTT.Forms {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Logout control.
+        /// NewTasks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Logout;
+        protected global::System.Web.UI.WebControls.Button NewTasks;
+        
+        /// <summary>
+        /// AllTasks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AllTasks;
         
         /// <summary>
         /// GridView1 control.
@@ -40,22 +49,13 @@ namespace PTT.Forms {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// SqlDataSourceRole control.
+        /// SqlDataSource1tasks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceRole;
-        
-        /// <summary>
-        /// NewRole control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button NewRole;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1tasks;
         
         /// <summary>
         /// GridView2 control.
@@ -67,21 +67,30 @@ namespace PTT.Forms {
         protected global::System.Web.UI.WebControls.GridView GridView2;
         
         /// <summary>
-        /// SqlDataSourceTeam control.
+        /// GridView3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceTeam;
+        protected global::System.Web.UI.WebControls.GridView GridView3;
         
         /// <summary>
-        /// NewTeam control.
+        /// GridView4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button NewTeam;
+        protected global::System.Web.UI.WebControls.GridView GridView4;
+        
+        /// <summary>
+        /// SqlDataSourceSharedTasks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceSharedTasks;
     }
 }

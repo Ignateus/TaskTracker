@@ -68,11 +68,16 @@
     <Content Include="Projects\EditProjects.aspx" />
     <Content Include="Projects\ListProjects.aspx" />
     <Content Include="Projects\NewProjects.aspx" />
+    <Content Include="Tasks\EditTasks.aspx" />
+    <Content Include="Tasks\ListTasks.aspx" />
+    <Content Include="Tasks\NewTask.aspx" />
     <Content Include="Tracker_Styles.css" />
     <Content Include="Usr_Ctl\Footer.aspx" />
     <Content Include="Usr_Ctl\Header.aspx" />
     <Content Include="Forms\MainMenu.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\NewRole.aspx.cs">
@@ -154,6 +159,35 @@
       <DependentUpon>NewProjects.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\EditTasks.aspx.cs">
+      <DependentUpon>EditTasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\EditTasks.aspx.designer.cs">
+      <DependentUpon>EditTasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\ListTasks.aspx.cs">
+      <DependentUpon>ListTasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\ListTasks.aspx.designer.cs">
+      <DependentUpon>ListTasks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\NewTask.aspx.cs">
+      <DependentUpon>NewTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\NewTask.aspx.designer.cs">
+      <DependentUpon>NewTask.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Usr_Ctl\Footer.aspx.cs">
       <DependentUpon>Footer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -180,6 +214,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

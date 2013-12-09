@@ -8,6 +8,7 @@ namespace PTT.Admin
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data;
     using System.Data.OleDb;
     using System.Data.Sql;
@@ -40,7 +41,8 @@ namespace PTT.Admin
         protected void SaveTeam_Click(object sender, EventArgs e)
         {
             ////connection string
-            SqlConnection con1 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
+            string connString = ConfigurationManager.ConnectionStrings["TaskTrackerConnectionString"].ToString();
+            SqlConnection con1 = new SqlConnection(connString);
             SqlDataAdapter da1;
             string mySql1 = "select MAX(TeamID) from Team";
             ////Query to update access level in the table
@@ -51,7 +53,7 @@ namespace PTT.Admin
             int nextID = (int)cmmd.ExecuteScalar();
             nextID = nextID + 1;
             con1.Close();
-            SqlConnection con2 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
+            SqlConnection con2 = new SqlConnection(connString);
             SqlDataAdapter da2;
             ////SqlDataReader reader;
             string mySql2 = "INSERT INTO Team (TeamID, TeamName) VALUES (" + nextID + ",'" + this.txtNewTeam.Text + "')";
@@ -62,7 +64,7 @@ namespace PTT.Admin
             SqlCommand cmmd2 = new SqlCommand(mySql2, con2);
             SqlDataReader reader = cmmd2.ExecuteReader();
             con2.Close();
-            Response.Redirect("Team.aspx");
+            Response.Redirect("../Forms/Admin.aspx");
         }
     }
 }

@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PTT.Projects {
+namespace PTT.Tasks {
     
     
-    public partial class EditProjects {
+    public partial class EditTasks {
         
         /// <summary>
         /// form1 control.
@@ -22,148 +22,112 @@ namespace PTT.Projects {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Label1 control.
+        /// DrpStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.DropDownList DrpStatus;
         
         /// <summary>
-        /// TxtProjectTitle control.
+        /// TxtTaskID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtProjectTitle;
+        protected global::System.Web.UI.WebControls.TextBox TxtTaskID;
         
         /// <summary>
-        /// TxtLeadPMName control.
+        /// DropDownList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtLeadPMName;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
         
         /// <summary>
-        /// TxtProjectCategory control.
+        /// SqlDataSource1Person control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtProjectCategory;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1Person;
         
         /// <summary>
-        /// TxtProjectType control.
+        /// DrpType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtProjectType;
+        protected global::System.Web.UI.WebControls.DropDownList DrpType;
         
         /// <summary>
-        /// TxtProjectStatus control.
+        /// TxtDueDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtProjectStatus;
+        protected global::System.Web.UI.WebControls.TextBox TxtDueDate;
         
         /// <summary>
-        /// TxtProjectYear control.
+        /// Calendar1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtProjectYear;
+        protected global::System.Web.UI.WebControls.Calendar Calendar1;
         
         /// <summary>
-        /// TxtProjectQ control.
+        /// DrpPriority control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtProjectQ;
+        protected global::System.Web.UI.WebControls.DropDownList DrpPriority;
         
         /// <summary>
-        /// TxtBudgetCost control.
+        /// TxtNotes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBudgetCost;
+        protected global::System.Web.UI.WebControls.TextBox TxtNotes;
         
         /// <summary>
-        /// TxtActualCost control.
+        /// TxtCreationDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtActualCost;
+        protected global::System.Web.UI.WebControls.TextBox TxtCreationDate;
         
         /// <summary>
-        /// TxtCurrency control.
+        /// DropDownList5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCurrency;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList5;
         
         /// <summary>
-        /// TxtUpdates control.
+        /// SqlDataSource1Project control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtUpdates;
-        
-        /// <summary>
-        /// TxtProjectDescription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtProjectDescription;
-        
-        /// <summary>
-        /// TxtBenefits control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtBenefits;
-        
-        /// <summary>
-        /// TxtCustomer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtCustomer;
-        
-        /// <summary>
-        /// TxtROI control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtROI;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1Project;
         
         /// <summary>
         /// BtnUpdate control.
@@ -182,23 +146,5 @@ namespace PTT.Projects {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnCancel;
-        
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-        
-        /// <summary>
-        /// SqlDataSource1projecttask control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1projecttask;
     }
 }

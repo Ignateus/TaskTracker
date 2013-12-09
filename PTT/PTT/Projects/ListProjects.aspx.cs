@@ -8,6 +8,7 @@ namespace PTT.Projects
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data;
     using System.Data.OleDb;
     using System.Data.Sql;
@@ -29,7 +30,8 @@ namespace PTT.Projects
         /// <param name="e">not needed 44</param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection con1 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
+            string connString = ConfigurationManager.ConnectionStrings["TaskTrackerConnectionString"].ToString();
+            SqlConnection con1 = new SqlConnection(connString);
             SqlDataAdapter da1;
             string mySql1 = "select AccessLevel from tblAccess where AccessID = '1'";
             ////Query to update access level in the table
@@ -95,8 +97,9 @@ namespace PTT.Projects
         /// <param name="sender">not needed</param>
         /// <param name="e">not needed 62</param>
         protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Response.Redirect("EditProjects.aspx");
+        {            
+            var blah = this.GridView2.SelectedValue; 
+            Response.Redirect("EditProjects.aspx?Project_ER_SR_No=" + blah);
         }
     }
 }

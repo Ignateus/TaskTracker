@@ -10,7 +10,7 @@
           {
             
              width: 406px;
-             margin-left: 960px;
+             margin-left: 634px;
          }
          background
             {

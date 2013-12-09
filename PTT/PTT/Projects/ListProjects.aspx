@@ -29,7 +29,7 @@
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSourceProjects" runat="server" ConnectionString="<%$ ConnectionStrings:TaskTrackerConnectionString %>" SelectCommand="SELECT tblProject.Project_ER_SR_No, tblProject.ProjectTitle, tblProject.LeadPMName, tblProject.ProjectCategory, tblProject.ProjectType, tblProject.ProjectStatus, tblProject.ProjectYear, tblProject.ProjectQuarter, tblProject.ProjectDescription, tblProject.CustomerTypeID FROM tblProject, tblAccess WHERE  tblAccess.PMName = tblProject.LeadPMName"></asp:SqlDataSource>
-        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1ProjectAdmin" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" AllowSorting="True">
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1ProjectAdmin" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" AllowSorting="True" DataKeyNames="Project_ER_SR_No">
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="Project_ER_SR_No" HeaderText="Project_ER_SR_No" SortExpression="Project_ER_SR_No" />

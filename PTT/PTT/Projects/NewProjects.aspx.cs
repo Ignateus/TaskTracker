@@ -8,6 +8,7 @@ namespace PTT.Projects
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data;
     using System.Data.OleDb;
     using System.Data.Sql;
@@ -51,7 +52,7 @@ namespace PTT.Projects
         /// <param name="e">not needed 56</param>
         protected void ListProjects_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ListProjects.aspx");
+            Response.Redirect("../Projects/ListProjects.aspx");
         }
 
         /// <summary>
@@ -64,7 +65,8 @@ namespace PTT.Projects
             ////connection string
             ////try
             ////{
-                SqlConnection con1 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
+                string connString = ConfigurationManager.ConnectionStrings["TaskTrackerConnectionString"].ToString();
+                SqlConnection con1 = new SqlConnection(connString);
                 SqlDataAdapter da1;
                 string mySql1 = "select MAX(ProjectID) from tblProject";
                 ////Query to update access level in the table
@@ -75,7 +77,7 @@ namespace PTT.Projects
                 int nextID = (int)cmmd.ExecuteScalar();
                 nextID = nextID + 1;
                 con1.Close();
-                SqlConnection con2 = new SqlConnection(@"Data Source=.\IGNATEUS; Initial Catalog=TaskTracker;  User id = sa ; Password = 123456;");
+                SqlConnection con2 = new SqlConnection(connString);
                 SqlDataAdapter da2;
                 ////SqlDataReader reader;
                 string mySql2 = "INSERT INTO tblProject (ProjectID, Project_ER_SR_No, ProjectTitle, LeadPMName, ProjectCategory, ProjectType, ProjectStatus, ProjectYear, ProjectQuarter, ProjectDescription, CustomerTypeID) VALUES (" + nextID + ", '" + this.txtProjectNo.Text + "', '" + this.txtProjectTitle.Text + "', '" + this.drpPM.Text + "', '" + this.drpCategory.Text + "', '" + this.drpProjectType.Text + "', '" + this.drpProjectStatus.Text + "' , '" + this.txtYear.Text + "', '" + this.drpQuarter.Text + "', '" + this.txtProjectDesc.Text + "' , '" + this.txtCustomer.Text + "')";
@@ -86,7 +88,7 @@ namespace PTT.Projects
                 SqlCommand cmmd2 = new SqlCommand(mySql2, con2);
                 SqlDataReader reader = cmmd2.ExecuteReader();
                 con2.Close();
-                Response.Redirect("ListProjects.aspx");
+                Response.Redirect("../Forms/MainMenu.aspx");
             ////}
             ////catch (SqlException sqle)
             ////{
@@ -102,7 +104,7 @@ namespace PTT.Projects
         /// <param name="e">not needed 55</param>
         protected void BtnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ListProjects.aspx");
+            Response.Redirect("../Forms/MainMenu.aspx");
         }
     }
 }
